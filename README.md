@@ -429,7 +429,7 @@ SRG093XW EVK 提供显示、摄像头、音频、网络及无线通信等功能�
 | 📡 开发 Wi-Fi                         | 《Quectel_SRG091X-W&SRG093X-W_Linux_Wi-Fi_功能验证指导》     | Wi-Fi 驱动、AP/STA 模式及功能验证          |
 | 🔵 开发 BlueTooth                     | [Quectel_SRG091X&SRG093X系列\_Linux\_蓝牙用户指导](./files/Quectel_SRG091X&SRG093X系列_Linux_蓝牙用户指导.pdf) | Bluetooth、音频及 BLE 功能验证             |
 | 📶 接入蜂窝网络                       | [SRG091X&SRG093X系列\_Linux\_蜂窝模块接入用户指导](./files/Quectel_SRG091X&SRG093X系列_Linux_蜂窝模块接入_用户指导.pdf)<br/>[Quectel_UMTS_LTE_5G_Linux_USB_Driver_用户指导](./files/reference/Quectel_UMTS_LTE_5G_Linux_USB_Driver_用户指导_V1.2.pdf)<br/>[Quectel_EC2x&EG2x&EG9x&EM05_Series_AT_Commands_Manual](./files/reference/Quectel_EC2x&EG2x&EG9x&EM05_Series_AT_Commands_Manual_V2.2.pdf)<br/>[Quectel_QConnectManager_Linux_用户指导](./files/Quectel_QConnectManager_Linux_用户指导_V1.0.pdf) | 驱动移植、网络连接及语音通话               |
-| 🌐 开发 Thread / Matter               | [Quectel\_SRG091X&SRG093X系列\_Linux\_Thread\_用户指导](./files/Quectel_SRG091X&SRG093X系列_Linux_Thread_用户指导.pdf) | Thread 启动、组网及功能验证                |
+| 🌐 开发 Thread                        | [Quectel\_SRG091X&SRG093X系列\_Linux\_Thread\_用户指导](./files/Quectel_SRG091X&SRG093X系列_Linux_Thread_用户指导.pdf) | Thread 启动、组网及功能验证                |
 | 🌐 开发 Matter                        | [Quectel_SRG091X-W&SRG093X-W_Linux_Matter_用户指导](./files/Quectel_SRG091X-W&SRG093X-W_Linux_Matter_用户指导.pdf) | Ethernet、BLE + Thread、BLE + Wi-Fi Matter |
 | ⚙️ 开发 Cortex-M33                    | [Quectel\_SRG093X系列\_M33\_开发指导](./files/Quectel_SRG093X系列_M33_开发指导.pdf) | M33、FreeRTOS、Zephyr、镜像编译及集成      |
 | 🔐 开启 Secure Boot                   | [Quectel\_SRG091X&SRG093X系列\_Linux\_Secure\_Boot\_应用指导](./files/Quectel_SRG091X&SRG093X系列_Linux_Secure_Boot_应用指导.pdf) | Secure Boot、AHAB、密钥及安全镜像          |
