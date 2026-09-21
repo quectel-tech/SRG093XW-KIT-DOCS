@@ -186,8 +186,8 @@ SDK 包包含 SRG093 系列平台 Linux BSP 开发所需的源码、Yocto Layer�
 
 | 软件包 | 说明 | 是否必需 |
 | --- | --- | :---: |
-| `SRG093XW_SDK.zst` | SRG093 SDK，包含 Yocto BSP 源码、Yocto Layer、编译脚本及相关工具 | 是 |
-| `SRG093XW_Yocto_Downloads.zst` | Yocto 编译所需源码下载缓存，用于减少编译过程中对外部网络的依赖 | 否 |
+| `SRG093XW_SDK.tar.zst` | SRG093 SDK，包含 Yocto BSP 源码、Yocto Layer、编译脚本及相关工具 | 是 |
+| `SRG093XW_Yocto_Downloads.tar.zst` | Yocto 编译所需源码下载缓存，用于减少编译过程中对外部网络的依赖 | 否 |
 
 > **缓存包下载：** [SRG093XW_Yocto_Downloads.tar.zst](https://developer.quectel.com/doc/files/SRG093XW/SRG093XW_Yocto_Downloads.tar.zst)
 
