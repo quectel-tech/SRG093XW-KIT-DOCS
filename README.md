@@ -190,10 +190,6 @@ SDK 包包含 SRG093 系列平台 Linux BSP 开发所需的源码、Yocto Layer�
 | `SRG093XW_Yocto_Downloads.zst` | Yocto 编译所需源码下载缓存，用于减少编译过程中对外部网络的依赖 | 否 |
 
 > **缓存包下载：** [SRG093XW_Yocto_Downloads.tar.zst](http://developer.quectel.com/doc/files/SRG093XW/SRG093XW_Yocto_Downloads.tar.zst)
->
-> [!NOTE]
->
-> 此 Yocto 源码缓存文件约为 37GB 大小，请酌情下载。
 
 如果使用源码下载缓存，请将缓存包解压至 SDK 的 `yocto/` 目录：
 
@@ -206,6 +202,7 @@ SR-IMX93/
 ```
 
 > [!TIP]
+>
 > - 网络环境正常时，可以**不**下载源码缓存包。
 > - 网络访问受限或希望减少重复下载时，建议使用源码缓存包。
 > - 新增软件包、修改 Recipe 版本或缓存不完整时，编译过程中仍可能需要下载额外源码。
