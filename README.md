@@ -178,7 +178,7 @@ SDK 包包含 SRG093 系列平台 Linux BSP 开发所需的源码、Yocto Layer�
 
 获取 `SRG093XW_SDK.tar.zst` 后，将其复制到 Ubuntu 开发主机，并按 [环境搭建](#环境搭建) 完成配置。
 
-> **SDK 下载：** [SRG093XW_SDK.tar.zst](http://developer.quectel.com/doc/files/SRG093XW/SRG093XW_SDK.tar.zst)
+> **SDK 下载：** [SRG093XW_SDK.tar.zst](https://developer.quectel.com/doc/files/SRG093XW/SRG093XW_SDK.tar.zst)
 
 #### Yocto 源码下载缓存
 
@@ -189,7 +189,7 @@ SDK 包包含 SRG093 系列平台 Linux BSP 开发所需的源码、Yocto Layer�
 | `SRG093XW_SDK.zst` | SRG093 SDK，包含 Yocto BSP 源码、Yocto Layer、编译脚本及相关工具 | 是 |
 | `SRG093XW_Yocto_Downloads.zst` | Yocto 编译所需源码下载缓存，用于减少编译过程中对外部网络的依赖 | 否 |
 
-> **缓存包下载：** [SRG093XW_Yocto_Downloads.tar.zst](http://developer.quectel.com/doc/files/SRG093XW/SRG093XW_Yocto_Downloads.tar.zst)
+> **缓存包下载：** [SRG093XW_Yocto_Downloads.tar.zst](https://developer.quectel.com/doc/files/SRG093XW/SRG093XW_Yocto_Downloads.tar.zst)
 
 如果使用源码下载缓存，请将缓存包解压至 SDK 的 `yocto/` 目录：
 
