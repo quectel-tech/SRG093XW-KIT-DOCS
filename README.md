@@ -40,7 +40,7 @@
 
 ---
 
-# 文档概览
+#  📖 文档概览
 
 本文档介绍 **SRG093XW EVK** 的基本信息、开发环境搭建、镜像编译与烧录、主要功能及相关开发文档，为开发人员进行 SRG093XW Linux BSP 开发及功能验证提供参考。
 
@@ -81,7 +81,7 @@
 
 ---
 
-# 快速上手
+#  ⚡ 快速上手
 
 本章节用于完成 SRG093XW EVK 的首次使用。完成后，开发板应能够正常启动 Linux 系统，并可通过调试串口查看系统启动日志。
 
@@ -148,7 +148,7 @@ SRG093XW EVK 是基于 NXP i.MX93 应用处理器设计的评估开发平台，�
 - [Quectel_SRG093X系列_硬件设计手册](./files/Quectel_SRG093X系列_硬件设计手册.pdf)
 - [Quectel_SR-IMXM_EVB_用户指导](./files/Quectel_SR-IMXM_EVB_用户指导.pdf)
 
-## 开发准备
+##  开发准备
 
 ### 硬件准备
 
@@ -409,7 +409,7 @@ TODO：待补充编译烧录指导文件
 
 将 TE-A 板上的 DIP 开关设置为 `0100`，进入 **eMMC Flash 启动模式**。
 
-# 功能与外设
+# 📦  功能与外设
 
 SRG093XW EVK 提供显示、摄像头、音频、网络及无线通信等功能。各功能的详细配置及使用方法请参考对应专项开发文档。
 
@@ -505,7 +505,7 @@ SRG093XW EVK 提供多种通用外设接口，可用于设备连接、数据采�
 
 > **专项文档：** [Quectel_SRG091X&SRG093X系列\_Linux\_外设用户指导](./files/Quectel_SRG091X&SRG093X系列_Linux_外设用户指导.pdf)
 
-# 网络与通信
+#  🌐 网络与通信
 
 SRG093XW EVK 支持 Wi-Fi、Bluetooth、蜂窝网络等网络与无线通信功能，并支持 Thread、Matter 等物联网应用。
 
@@ -585,7 +585,7 @@ SRG093XW EVK 支持 Matter 相关应用开发，可通过多种网络连接方�
 
 > **专项文档：** [Quectel_SRG091X-W&SRG093X-W_Linux_Matter_用户指导](./files/Quectel_SRG091X-W&SRG093X-W_Linux_Matter_用户指导.pdf)
 
-# 高级功能
+#  🚀 高级功能
 
 SRG093XW 平台支持 Cortex-M33 实时处理、安全启动及系统分区调整等高级功能，可满足实时控制、系统安全及存储配置等应用需求。
 
@@ -631,11 +631,11 @@ SRG093XW Linux BSP 支持根据实际应用需求调整系统镜像分区及分�
 
 > **专项文档：** [Quectel\_SRG091X&SRG093X系列\_Linux\_分区调整指导](./files/Quectel_SRG091X&SRG093X系列_Linux_分区调整指导.pdf)
 
-# FAQ
+#  ❓ FAQ
 
 参考文档：[FAQ](./FAQ.md)
 
-# 修订记录
+#  📝 修订记录
 
 | 版本 | 日期 | 修订内容 |
 | --- | --- | --- |
