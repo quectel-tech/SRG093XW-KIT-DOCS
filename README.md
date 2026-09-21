@@ -190,10 +190,6 @@ SDK 包包含 SRG093 系列平台 Linux BSP 开发所需的源码、Yocto Layer�
 | `SRG093XW_Yocto_Downloads.zst` | Yocto 编译所需源码下载缓存，用于减少编译过程中对外部网络的依赖 | 否 |
 
 > **缓存包下载：** [SRG093XW_Yocto_Downloads.tar.zst](http://developer.quectel.com/doc/files/SRG093XW/SRG093XW_Yocto_Downloads.tar.zst)
->
-> [!NOTE]
->
-> 此 Yocto 源码缓存文件约为 37GB 大小，请酌情下载。
 
 如果使用源码下载缓存，请将缓存包解压至 SDK 的 `yocto/` 目录：
 
@@ -206,6 +202,7 @@ SR-IMX93/
 ```
 
 > [!TIP]
+>
 > - 网络环境正常时，可以**不**下载源码缓存包。
 > - 网络访问受限或希望减少重复下载时，建议使用源码缓存包。
 > - 新增软件包、修改 Recipe 版本或缓存不完整时，编译过程中仍可能需要下载额外源码。
@@ -636,16 +633,7 @@ SRG093XW Linux BSP 支持根据实际应用需求调整系统镜像分区及分�
 
 # FAQ
 
-本章节汇总 SRG093XW EVK 开发及使用过程中常见的问题及解决方法，相关内容将根据实际开发及使用情况持续更新。
-
-> **后续补充**
->
-> - 开发环境 / 编译问题
-> - 烧录失败及启动异常
-> - 串口无法识别
-> - Wi-Fi / Bluetooth / 蜂窝网络问题
-> - 显示 / Camera / Audio 常见问题
-> - 联系方式、开发者论坛及 GitHub 入口
+参考文档：[FAQ](./FAQ.md)
 
 # 修订记录
 
