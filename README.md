@@ -12,35 +12,36 @@
 
 ## 目录
 
-- [文档概览](#文档概览)
-- [快速上手](#快速上手)
+- [文档概览](#📖 文档概览)
+- [快速上手](#⚡ 快速上手)
   - [开发板介绍](#开发板介绍)
   - [开发准备](#开发准备)
   - [环境搭建](#环境搭建)
   - [镜像编译](#镜像编译)
   - [镜像烧录与系统启动](#镜像烧录与系统启动)
-- [功能与外设](#功能与外设)
+- [功能与外设](#📦  功能与外设)
   - [功能支持总览](#功能支持总览)
   - [显示与触摸](#显示与触摸)
   - [摄像头](#摄像头)
   - [音频](#音频)
   - [通用外设](#通用外设)
-- [网络与通信](#网络与通信)
+- [网络与通信](#🌐 网络与通信)
   - [Wi-Fi](#wi-fi)
   - [Bluetooth](#bluetooth)
   - [蜂窝网络](#蜂窝网络)
   - [Thread](#thread)
   - [Matter](#matter)
-- [高级功能](#高级功能)
+- [高级功能](#🚀 高级功能)
   - [Cortex-M33](#cortex-m33)
   - [Secure Boot](#secure-boot)
   - [分区调整](#分区调整)
-- [FAQ](#faq)
-- [修订记录](#修订记录)
+- [专项文档](# 🧩 专项文档)
+- [FAQ](#❓ FAQ)
+- [修订记录](#📝 修订记录)
 
 ---
 
-#  📖 文档概览
+# 📖 文档概览
 
 本文档介绍 **SRG093XW EVK** 的基本信息、开发环境搭建、镜像编译与烧录、主要功能及相关开发文档，为开发人员进行 SRG093XW Linux BSP 开发及功能验证提供参考。
 
@@ -48,7 +49,7 @@
 >
 > 开发板已预烧录系统镜像，可直接上电使用。预烧录镜像用于基本功能体验，具体功能支持及软件版本请以当前发布的 SDK 为准。
 
-## 开始之前
+### 开始之前
 
 如果你是第一次使用 SRG093XW EVK，建议按以下顺序操作：
 
@@ -58,30 +59,7 @@
 >
 > 如果仅希望快速体验开发板，可跳过编译步骤，直接使用预烧录镜像完成上电和系统启动。
 
-## 配套文档
-
-| 分类 | 文档 | 适用内容 |
-| --- | --- | --- |
-| 产品规格 | [Quectel_SRG093X系列_短距离模块产品规格书](./files/Quectel_SRG093X系列_短距离模块产品规格书.pdf) | 产品规格、硬件资源、接口及主要功能 |
-| 硬件设计 | [Quectel_SRG093X系列_硬件设计手册](./files/Quectel_SRG093X系列_硬件设计手册.pdf) | 引脚、电源、接口、射频及电气设计 |
-| EVB 用户指导 | [Quectel_SR-IMXM_EVB_用户指导](./files/Quectel_SR-IMXM_EVB_用户指导.pdf) | 板卡布局、接口、配件、按键及开关机 |
-| 编译与烧录 | Quectel_SRG091X&SRG093X系列\_Linux\_编译&烧录指导<br>TODO: 待补充编译烧录指导文件 | 开发环境、Linux 镜像编译及烧录 |
-| 显示与触摸 | [Quectel_SRG091X&SRG093X系列\_Linux\_显示驱动_开发指导](./files/Quectel_SRG091X&SRG093X系列_Linux_显示驱动_开发指导.pdf) | MIPI、LVDS、触摸、背光及显示驱动 |
-| 摄像头 | [Quectel_SRG093X系列\_Linux\_摄像头开发指导](./files/Quectel_SRG093X系列_Linux_摄像头开发指导.pdf) | 摄像头驱动、Device Tree 及 ISP |
-| 音频 | [Quectel_SRG091X&SRG093X系列\_Linux\_音频功能测试指导](./files/Quectel_SRG091X&SRG093X系列_Linux_音频功能测试指导.pdf) | Audio Codec 及音频测试 |
-| 通用外设 | [Quectel_SRG091X&SRG093X系列\_Linux\_外设用户指导](./files/Quectel_SRG091X&SRG093X系列_Linux_外设用户指导.pdf) | GPIO、I2C、SPI、Ethernet、USB、ADC、CAN |
-| Wi-Fi | Quectel_SRG091X-W&SRG093X-W_Linux_Wi-Fi_功能验证指导<br/>TODO: 待补充Wi-Fi指导文件 | Wi-Fi 驱动、AP/STA 模式及功能验证 |
-| Bluetooth | [Quectel_SRG091X&SRG093X系列\_Linux\_蓝牙用户指导](./files/Quectel_SRG091X&SRG093X系列_Linux_蓝牙用户指导.pdf) | Bluetooth、音频及 BLE 功能验证 |
-| 蜂窝网络 | [SRG091X&SRG093X系列\_Linux\_蜂窝模块接入用户指导](./files/SRG091X&SRG093X系列_Linux_蜂窝模块接入_用户指导.pdf) | 驱动移植、网络连接及语音通话 |
-| Thread | [Quectel_SRG091X&SRG093X系列\_Linux\_Thread_用户指导](./files/Quectel_SRG091X&SRG093X系列_Linux_Thread_用户指导.pdf) | Thread 启动、组网及功能验证 |
-| Matter | [Quectel_SRG091X-W&SRG093X-W_Linux_Matter_用户指导](./files/Quectel_SRG091X-W&SRG093X-W_Linux_Matter_用户指导.pdf) | Ethernet、BLE + Thread、BLE + Wi-Fi Matter |
-| Cortex-M33 | [Quectel_SRG093X系列\_M33\_开发指导](./files/Quectel_SRG093X系列_M33_开发指导.pdf) | M33、FreeRTOS、Zephyr、镜像编译及集成 |
-| Secure Boot | [Quectel_SRG091X&SRG093X系列\_Linux\_Secure_Boot_应用指导](./files/Quectel_SRG091X&SRG093X系列_Linux_Secure_Boot_应用指导.pdf) | Secure Boot、AHAB、密钥及安全镜像 |
-| 分区调整 | [Quectel_SRG091X&SRG093X系列\_Linux\_分区调整指导](./files/Quectel_SRG091X&SRG093X系列_Linux_分区调整指导.pdf) | Rootfs、Boot 及 Flash 镜像分区 |
-
----
-
-#  ⚡ 快速上手
+# ⚡ 快速上手
 
 本章节用于完成 SRG093XW EVK 的首次使用。完成后，开发板应能够正常启动 Linux 系统，并可通过调试串口查看系统启动日志。
 
@@ -505,7 +483,7 @@ SRG093XW EVK 提供多种通用外设接口，可用于设备连接、数据采�
 
 > **专项文档：** [Quectel_SRG091X&SRG093X系列\_Linux\_外设用户指导](./files/Quectel_SRG091X&SRG093X系列_Linux_外设用户指导.pdf)
 
-#  🌐 网络与通信
+# 🌐 网络与通信
 
 SRG093XW EVK 支持 Wi-Fi、Bluetooth、蜂窝网络等网络与无线通信功能，并支持 Thread、Matter 等物联网应用。
 
@@ -585,7 +563,7 @@ SRG093XW EVK 支持 Matter 相关应用开发，可通过多种网络连接方�
 
 > **专项文档：** [Quectel_SRG091X-W&SRG093X-W_Linux_Matter_用户指导](./files/Quectel_SRG091X-W&SRG093X-W_Linux_Matter_用户指导.pdf)
 
-#  🚀 高级功能
+# 🚀 高级功能
 
 SRG093XW 平台支持 Cortex-M33 实时处理、安全启动及系统分区调整等高级功能，可满足实时控制、系统安全及存储配置等应用需求。
 
@@ -631,11 +609,32 @@ SRG093XW Linux BSP 支持根据实际应用需求调整系统镜像分区及分�
 
 > **专项文档：** [Quectel\_SRG091X&SRG093X系列\_Linux\_分区调整指导](./files/Quectel_SRG091X&SRG093X系列_Linux_分区调整指导.pdf)
 
-#  ❓ FAQ
+#  🧩 专项文档
+
+| 分类 | 文档 | 适用内容 |
+| --- | --- | --- |
+| 产品规格 | [Quectel_SRG093X系列_短距离模块产品规格书](./files/Quectel_SRG093X系列_短距离模块产品规格书.pdf) | 产品规格、硬件资源、接口及主要功能 |
+| 硬件设计 | [Quectel_SRG093X系列_硬件设计手册](./files/Quectel_SRG093X系列_硬件设计手册.pdf) | 引脚、电源、接口、射频及电气设计 |
+| EVB 用户指导 | [Quectel_SR-IMXM_EVB_用户指导](./files/Quectel_SR-IMXM_EVB_用户指导.pdf) | 板卡布局、接口、配件、按键及开关机 |
+| 编译与烧录 | Quectel_SRG091X&SRG093X系列\_Linux\_编译&烧录指导<br>TODO: 待补充编译烧录指导文件 | 开发环境、Linux 镜像编译及烧录 |
+| 显示与触摸 | [Quectel_SRG091X&SRG093X系列\_Linux\_显示驱动_开发指导](./files/Quectel_SRG091X&SRG093X系列_Linux_显示驱动_开发指导.pdf) | MIPI、LVDS、触摸、背光及显示驱动 |
+| 摄像头 | [Quectel_SRG093X系列\_Linux\_摄像头开发指导](./files/Quectel_SRG093X系列_Linux_摄像头开发指导.pdf) | 摄像头驱动、Device Tree 及 ISP |
+| 音频 | [Quectel_SRG091X&SRG093X系列\_Linux\_音频功能测试指导](./files/Quectel_SRG091X&SRG093X系列_Linux_音频功能测试指导.pdf) | Audio Codec 及音频测试 |
+| 通用外设 | [Quectel_SRG091X&SRG093X系列\_Linux\_外设用户指导](./files/Quectel_SRG091X&SRG093X系列_Linux_外设用户指导.pdf) | GPIO、I2C、SPI、Ethernet、USB、ADC、CAN |
+| Wi-Fi | Quectel_SRG091X-W&SRG093X-W_Linux_Wi-Fi_功能验证指导<br/>TODO: 待补充Wi-Fi指导文件 | Wi-Fi 驱动、AP/STA 模式及功能验证 |
+| Bluetooth | [Quectel_SRG091X&SRG093X系列\_Linux\_蓝牙用户指导](./files/Quectel_SRG091X&SRG093X系列_Linux_蓝牙用户指导.pdf) | Bluetooth、音频及 BLE 功能验证 |
+| 蜂窝网络 | [SRG091X&SRG093X系列\_Linux\_蜂窝模块接入用户指导](./files/SRG091X&SRG093X系列_Linux_蜂窝模块接入_用户指导.pdf) | 驱动移植、网络连接及语音通话 |
+| Thread | [Quectel_SRG091X&SRG093X系列\_Linux\_Thread_用户指导](./files/Quectel_SRG091X&SRG093X系列_Linux_Thread_用户指导.pdf) | Thread 启动、组网及功能验证 |
+| Matter | [Quectel_SRG091X-W&SRG093X-W_Linux_Matter_用户指导](./files/Quectel_SRG091X-W&SRG093X-W_Linux_Matter_用户指导.pdf) | Ethernet、BLE + Thread、BLE + Wi-Fi Matter |
+| Cortex-M33 | [Quectel_SRG093X系列\_M33\_开发指导](./files/Quectel_SRG093X系列_M33_开发指导.pdf) | M33、FreeRTOS、Zephyr、镜像编译及集成 |
+| Secure Boot | [Quectel_SRG091X&SRG093X系列\_Linux\_Secure_Boot_应用指导](./files/Quectel_SRG091X&SRG093X系列_Linux_Secure_Boot_应用指导.pdf) | Secure Boot、AHAB、密钥及安全镜像 |
+| 分区调整 | [Quectel_SRG091X&SRG093X系列\_Linux\_分区调整指导](./files/Quectel_SRG091X&SRG093X系列_Linux_分区调整指导.pdf) | Rootfs、Boot 及 Flash 镜像分区 |
+
+# ❓ FAQ
 
 参考文档：[FAQ](./FAQ.md)
 
-#  📝 修订记录
+# 📝 修订记录
 
 | 版本 | 日期 | 修订内容 |
 | --- | --- | --- |
