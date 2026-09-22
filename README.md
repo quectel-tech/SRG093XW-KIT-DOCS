@@ -324,6 +324,10 @@ bitbake <image-name>
 ls -lh tmp/deploy/images/quectel-srg093xw/
 ```
 
+烧录镜像、烧录工具`uuu.exe`以及烧录脚本`uuu.auto`会被自动打包到镜像目录下。以SRG093X-W为例，这些文件如下图所示。
+
+![1790069385042](media/1790069385042.png)
+
 > [!NOTE]
 >
 > 该目录包含系统镜像及相关编译产物。实际用于烧录的镜像文件请以当前 SDK 版本及《Quectel_SRG091X&SRG093X系列\_Linux\_编译&烧录指导》中的说明为准。
@@ -333,8 +337,6 @@ ls -lh tmp/deploy/images/quectel-srg093xw/
 > [!CAUTION]
 >
 > 切换 DIP 开关前，请先将开发板供电拨码开关拨至 **OFF**，避免带电切换启动模式。
-
-烧录镜像、烧录工具 `uuu.exe` 以及烧录脚本 `uuu.auto` 会被自动打包到 `yocto/image` 目录。
 
 ### Windows 环境烧录
 
