@@ -368,7 +368,9 @@ uuu.exe uuu.auto
 
 使用 Linux 平台 UUU 工具进行镜像烧录，具体方式请以当前 SDK 支持情况及《Quectel_SRG091X&SRG093X系列\_Linux\_编译&烧录指导》为准。
 
-TODO：待补充编译烧录指导文件
+> [!NOTE]
+>
+> 在Linux构建环境中，无需切换到 Windows进行烧录。只需使用构建过程中生成的uuu.auto脚本，并配合Linux原生UUU工具即可完成烧录。
 
 ### 系统启动
 
