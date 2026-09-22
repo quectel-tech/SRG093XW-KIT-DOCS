@@ -342,13 +342,13 @@ ls -lh tmp/deploy/images/quectel-srg093xw/
 
 如下图所示，将 SRG093X-W-TE-A安装到 SR-IMXM-EVB上。然后使用两根 USB Type-C转 Type-A数据线，将EVB 的 USB_AP端口和 DEBUG_UART端口连接到 Wihdows PC。
 
-<img src="media/1790067030677.png" alt="1790067030677" style="zoom:50%;" />
+<img src="media/1790067030677.png" alt="1790067030677" width="50%;" />
 
 **步骤 2：设置下载模式**
 
 将 TE-A 板上的 DIP 开关设置为 `1000`，使模块进入串行下载模式。
 
-<img src="media/1790067041821.png" alt="1790067041821" style="zoom:50%;" />
+<img src="media/1790067041821.png" alt="1790067041821" width="50%;" />
 
 **步骤 3：准备烧录文件**
 
