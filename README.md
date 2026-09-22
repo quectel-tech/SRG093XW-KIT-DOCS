@@ -84,7 +84,7 @@ SRG093XW EVK 是基于 NXP i.MX93 应用处理器设计的评估开发平台，�
 | 工业接口 | CAN FD |
 | 音频 | Audio Codec |
 
-### KIT 套件及配件
+### 套件及配件
 
 标准套件通常包含以下内容。
 
@@ -205,37 +205,45 @@ cd ~/SR-IMX93/yocto
 ls
 ```
 
-目录中应包含 `sources`、`setup-environment` 等文件和目录。
+> [!NOTE]
+>
+> 目录中应包含 `sources`、`setup-environment` 等文件和目录。
 
-### SDK 目录结构
+目录结构如下：
 
-```text
-SR-IMX93/
-└── yocto/
-    ├── build.sh
-    ├── cst/
-    ├── imx-setup-release.sh
-    ├── README
-    ├── README-IMXBSP
-    ├── setup-environment
-    ├── sources/
-    │   ├── base/
-    │   ├── meta-arm/
-    │   ├── meta-freescale/
-    │   ├── meta-freescale-distro/
-    │   ├── meta-imx/
-    │   ├── meta-imx-quectel-srg093x/
-    │   ├── meta-nxp-connectivity/
-    │   ├── meta-openembedded/
-    │   ├── meta-qt6/
-    │   ├── poky/
-    │   └── ...
-    └── uuu.exe
+```shell
+/srg093x/code/SR-IMX93/yocto$ tree -L2
+.
+├── build.sh # Build Script
+├── imx-setup-release.sh -> sources/meta-imx/tools/imx-setup-release.sh # Environment Setup Script
+├── README -> sources/base/README
+├── README-IMXBSP -> sources/meta-imx/README
+├── setup-environment -> sources/base/setup-environment # Environment SetupScript (General)
+├── sources # All Source Code and Layers
+│ ├── base
+│ ├── meta-arm
+│ ├── meta-browser
+│ ├── meta-clang
+│ ├── meta-freescale
+│ ├── meta-freescale-3rdparty
+│ ├── meta-freescale-distro
+│ ├── meta-imx
+│ ├── meta-imx-quectel-srg093x
+│ ├── meta-nxp-connectivity
+│ ├── meta-nxp-demo-experience
+│ ├── meta-openembedded
+│ ├── meta-qt6
+│ ├── meta-security
+│ ├── meta-timesys
+│ ├── meta-virtualization
+│ └── poky
+└── uuu.exe # Windows Flashing Tool
+└── uuu # Linux Flashing Tool
 ```
 
 主要目录及文件说明：
 
-| 目录 / 文件 | 说明 |
+| 目录/文件 | 说明 |
 | --- | --- |
 | `sources/` | Yocto BSP 源码及各 Yocto Layer |
 | `sources/meta-imx/` | NXP i.MX BSP 相关 Yocto Layer |
@@ -300,6 +308,8 @@ bitbake <image-name>
 >
 > 首次编译耗时相对较长，后续编译可复用已有构建缓存。
 
+![1790066901578](media/1790066901578.png)
+
 ### 查看编译产物
 
 镜像文件位于：
@@ -330,15 +340,19 @@ ls -lh tmp/deploy/images/quectel-srg093xw/
 
 **步骤 1：连接调试串口**
 
-将开发板的 `USB-AP` 端口连接到 Windows PC。
+如下图所示，将 SRG093X-W-TE-A安装到 SR-IMXM-EVB上。然后使用两根 USB Type-C转 Type-A数据线，将EVB 的 USB_AP端口和 DEBUG_UART端口连接到 Wihdows PC。
+
+<img src="media/1790067030677.png" alt="1790067030677" style="zoom:50%;" />
 
 **步骤 2：设置下载模式**
 
 将 TE-A 板上的 DIP 开关设置为 `1000`，使模块进入串行下载模式。
 
+<img src="media/1790067041821.png" alt="1790067041821" style="zoom:50%;" />
+
 **步骤 3：准备烧录文件**
 
-将 `yocto/image/` 目录下的烧录镜像、`uuu.exe` 和 `uuu.auto` 复制至 Windows PC 的同一目录。
+将 `yocto/images/` 镜像目录下的烧录镜像、`uuu.exe` 和 `uuu.auto` 复制至 Windows PC 的同一目录。
 
 **步骤 4：执行烧录**
 
@@ -347,6 +361,8 @@ ls -lh tmp/deploy/images/quectel-srg093xw/
 ```bash
 uuu.exe uuu.auto
 ```
+
+<img src="media/1790067195805.png" alt="1790067195805"  />
 
 ### Linux 环境烧录
 
@@ -370,6 +386,12 @@ TODO：待补充编译烧录指导文件
 **步骤 2：设置启动模式**
 
 将 TE-A 板上的 DIP 开关设置为 `0100`，进入 **eMMC Flash 启动模式**。
+
+**步骤 3：断电重启**
+
+打开串口终端工具，选择相应的调试串口，并将波特率设置为115200。然后将开发板断电后重新上电。如果开发板成功启动并显示控制台命令提示符，则说明镜像已正确烧录。默认登录用户名为`root`。
+
+![1790068184843](media/1790068184843.png)
 
 # 专项开发文档
 
