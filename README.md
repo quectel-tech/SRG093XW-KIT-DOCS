@@ -132,7 +132,7 @@ SRG093 系列 Linux BSP 开发主要需要：
 
 #### Linux 开发环境
 
-推荐使用 **Ubuntu 22.04 LTS 及以上版本**。具体环境要求请参考《Quectel_SRG091X&SRG093X系列\_Linux\_编译&烧录指导》（TODO：待补充编译烧录指导文件）。
+推荐使用 **Ubuntu 22.04 LTS 及以上版本**。具体环境要求请参考[《Quectel_SRG091X&SRG093X系列_编译&烧录指导》](./files/Quectel_SRG091X&SRG093X系列_编译&烧录指导.pdf)。
 
 #### SDK 开发包
 
@@ -266,9 +266,8 @@ ls
 
 > [!NOTE]
 >
-> 本章节仅介绍基本镜像编译流程。详细编译说明及错误处理请参考《Quectel_SRG091X&SRG093X系列\_Linux\_编译&烧录指导》。
+> 本章节仅介绍基本镜像编译流程。详细编译说明及错误处理请参考[《Quectel_SRG091X&SRG093X系列_编译&烧录指导》](./files/Quectel_SRG091X&SRG093X系列_编译&烧录指导.pdf)。
 >
-> TODO：待补充编译烧录指导文件
 
 ### 编译完整镜像
 
@@ -408,12 +407,12 @@ SRG093XW EVK 提供显示、摄像头、音频、网络及无线通信等功能�
 | 👆了解SRG093X系列_短距离模块产品规格书 | [《Quectel_SRG093X系列_短距离模块产品规格书》](./files/Quectel_SRG093X系列_短距离模块产品规格书.pdf) | 产品规格、硬件资源、接口及主要功能         |
 | 👆了解SRG093X系列_硬件设计             | [《Quectel_SRG093X系列_硬件设计手册》](./files/Quectel_SRG093X系列_硬件设计手册.pdf) | 引脚、电源、接口、射频及电气设计           |
 | 👆了解EVB使用说明                      | [《Quectel_SR-IMXM_EVB_用户指导》](./files/Quectel_SR-IMXM_EVB_用户指导.pdf) | 板卡布局、接口、配件、按键及开关机         |
-| 🚀 编译并烧录                          | 《Quectel_SRG091X&SRG093X系列\_Linux_编译&烧录指导》         | 开发环境、Linux 镜像编译及烧录             |
+| 🚀 编译并烧录                          | [《Quectel_SRG091X&SRG093X系列_编译&烧录指导》](./files/Quectel_SRG091X&SRG093X系列_编译&烧录指导.pdf) | 开发环境、Linux 镜像编译及烧录             |
 | 🖥️ 开发显示/触摸                       | [《Quectel_SRG091X&SRG093X系列\_Linux\_显示驱动_开发指导》](./files/Quectel_SRG091X&SRG093X系列_Linux_显示驱动_开发指导.pdf) | MIPI、LVDS、触摸、背光及显示驱动           |
 | 📷 开发 Camera                         | [《Quectel_SRG093X系列\_Linux\_摄像头开发指导》](./files/Quectel_SRG093X系列_Linux_摄像头开发指导.pdf) | 摄像头驱动、Device Tree 及 ISP             |
 | 🔊 开发音频                            | [《Quectel_SRG091X&SRG093X系列\_Linux\_音频功能测试指导》](./files/Quectel_SRG091X&SRG093X系列_Linux_音频功能测试指导.pdf) | Audio Codec 及音频测试                     |
 | 🔌 开发通用外设                        | [《Quectel_SRG091X&SRG093X系列\_Linux\_外设用户指导》](./files/Quectel_SRG091X&SRG093X系列_Linux_外设用户指导.pdf) | GPIO、I2C、SPI、Ethernet、USB、ADC、CAN    |
-| 📡 开发 Wi-Fi                          | 《Quectel_SRG091X-W&SRG093X-W_Linux_Wi-Fi_功能验证指导》     | Wi-Fi 驱动、AP/STA 模式及功能验证          |
+| 📡 开发 Wi-Fi                          | [《Quectel_SRG091X-W&SRG093X-W_Linux_Wi-Fi_功能验证指导》](./files/Quectel_SRG091X-W&SRG093X-W_Linux_Wi-Fi_功能验证指导.pdf) | Wi-Fi 驱动、AP/STA 模式及功能验证          |
 | 🔵 开发 BlueTooth                      | [《Quectel_SRG091X&SRG093X系列\_Linux\_蓝牙用户指导》](./files/Quectel_SRG091X&SRG093X系列_Linux_蓝牙用户指导.pdf) | Bluetooth、音频及 BLE 功能验证             |
 | 📶 接入蜂窝网络                        | [《SRG091X&SRG093X系列\_Linux\_蜂窝模块接入用户指导》](./files/Quectel_SRG091X&SRG093X系列_Linux_蜂窝模块接入_用户指导.pdf)<br/>[《Quectel_UMTS_LTE_5G_Linux_USB_Driver_用户指导》](./files/reference/Quectel_UMTS_LTE_5G_Linux_USB_Driver_用户指导_V1.2.pdf)<br/>[《Quectel_EC2x&EG2x&EG9x&EM05_Series_AT_Commands_Manual》](./files/reference/Quectel_EC2x&EG2x&EG9x&EM05_Series_AT_Commands_Manual_V2.2.pdf)<br/>[《Quectel_QConnectManager_Linux_用户指导》](./files/Quectel_QConnectManager_Linux_用户指导_V1.0.pdf) | 驱动移植、网络连接及语音通话               |
 | 🌐 开发 Thread                         | [《Quectel\_SRG091X&SRG093X系列\_Linux\_Thread\_用户指导》](./files/Quectel_SRG091X&SRG093X系列_Linux_Thread_用户指导.pdf) | Thread 启动、组网及功能验证                |
